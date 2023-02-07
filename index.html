@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Quiz</title>
+</head>
+<link rel="stylesheet" href="quiz.css">
+
+
+<body>
+    <!-- <p id="counterdown">01:00</p> -->
+    <div class="container">
+        
+        <input type="text" class="question"  id="que" name="name">
+        <button id="btn" class="question">Start Quiz</button>
+    </div>
+    <!-- <script src="app.js"></script> -->
+    <script>
+        let btn=document .querySelector('#btn');
+btn.addEventListener("click",()=>{
+    
+location.href="questions.html" ;
+sessionStorage.setItem("location.href.value");
+});
+
+    </script>
+</body>
+
+</html>

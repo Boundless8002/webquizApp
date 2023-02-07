@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Set</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container">
+        <div id="quiz">
+            <div class="header"><div class="quiz_start">Welcome to Quiz competition</div>
+        <div id="time">01:00</div></div>
+            <div class="body">
+                <h2 id="questionset">1.what is the currency of India ?</h2>
+                <div class="row">
+                <input type="radio" class="options" id="option" name="option" value="a" style="height:20px; width:20px; vertical-align: middle;" CHECKED >
+                <label for="option1">option 1</label></div>
+                <div class="row">
+                <input type="radio" class="options" id="option" name="option"  value="b" style="height:20px; width:20px; vertical-align: middle;" CHECKED >
+                <label for="option2">option 2</label></div>
+                <div class="row">
+                <input type="radio" class="options" id="option" name="option"  value="c" style="height:20px; width:20px; vertical-align: middle;" CHECKED >
+                <label for="option3">option 3</label></div>
+                <div class="row">
+                <input type="radio" class="options" id="option" name="option"  value="d" style="height:20px; width:20px; vertical-align: middle;" CHECKED >
+                <label for="option4">option 4</label></div>
+                <div class="button">
+                    <button id="previous" onclick="previous()">Previous Question</button>
+                    <button id="nextbtn" onclick="submitQuiz()" >Next Question</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" ></script>
+</body>
+</html>

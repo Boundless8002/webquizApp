@@ -1,0 +1,123 @@
+*{
+    padding:0;
+    margin:0;
+}
+/* #counterdown{
+    width:40%;
+    height:50px;
+    display:flex-inline;
+    justify-content: center;
+    Font-size:45px;
+    font-weight:60px;
+    float:right;
+    
+    
+    background-color: aqua;
+} */
+.container{
+    width:100%;
+    background-color: grey;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    align-content: center
+    
+    
+}
+#btn{
+    width:45%;
+    border: none;
+    border-radius: 200px;
+    background-color: cornflowerblue;
+    color :white;
+    padding:20px;
+    font-weight:200px;
+    font-size:35px;
+}
+#que{
+    width:42%;
+    padding:15px;
+    border: none;
+}
+#quiz{
+    box-shadow:10px 10px 10px 10px;
+     display: flex;
+    flex-direction: column;
+     /* justify-content: center;
+    align-items: center;  */
+    border-radius:4px;
+    /* display:grid; */
+    background-color: blueviolet;
+    width:1000px;
+    height:600px;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    background-color: red;
+    height:80px;
+
+}
+.body{
+    background-color: aqua;
+    height:520px;
+}
+.quiz_start{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:40px
+    
+}
+#time{
+    font-size: 45px;
+    padding-right:40px;
+}
+
+#questionset{
+    font-size: 35px;
+    padding-left: 60px;
+    padding-top:20px;
+}
+.row{
+    font-size: 35px;
+    padding-left: 60px;
+    padding-top:20px;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+   font-display: 50px;
+   height:50px;
+    padding-left: 60px;
+    padding-right:60px;
+    padding-top:70px;
+ 
+}
+#nextbtn:hover{
+    cursor:pointer;
+   
+}
+#previous:hover{
+    cursor:pointer;
+}
+#previous{
+    padding:8px;
+    font-size: 30px;
+    background-color: blue;
+    border: 4px;
+    border-radius: 200px;
+    color: antiquewhite;
+}
+#nextbtn{
+    padding:8px;
+   
+    font-size: 30px;
+    background-color: blue;
+    border: 4px;
+    border-radius: 200px;
+    color: antiquewhite;
+}
