@@ -52,6 +52,8 @@
     background-color: blueviolet;
     width:1000px;
     height:600px;
+    /* justify-content: center;
+    align-items: center; */
 }
 .header{
     display:flex;
@@ -121,3 +123,40 @@
     border-radius: 200px;
     color: antiquewhite;
 }
+#start-again{
+    /* margin:230px; */
+    padding:10px;
+    /* background-color:  aqua; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    place-items:center;
+width:100%;
+height:100vh;
+
+}
+#start-again button{
+    padding:10px;
+    border:1px solid black;
+    border-radius:  20px;
+    font-size:20px;
+    margin-bottom: 50px;
+}
+#result{
+    color:white;
+    margin-top: 50px;;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+   height:auto;
+   font-size:22px;
+}
+#result h3{
+    color:antiquewhite;
+    font-size:36px;
+}
+
+/* Add these styles to your quiz.css stylesheet */
+
