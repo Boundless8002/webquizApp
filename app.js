@@ -1,9 +1,11 @@
 
-let startMinutes = 2;
+let startMinutes = .15;
 let currtime = startMinutes * 60;
 const countdown = document.getElementById('time');
 let timeout;
 setInterval(update, 1000);
+let alertShown = false;
+
 
 function update() {
     let minutes = Math.floor(currtime / 60);
@@ -16,11 +18,17 @@ function update() {
     countdown.innerHTML = `${minutes} : ${seconds}`;
     currtime--;
     currtime = currtime < 0 ? 0 : currtime;
-    if (currtime === 0) {
+    if (currtime === 0 && !alertShown) {
+        alertShown = true;
         setTimeout(() => {
-            alert("Time up");
+            Swal.fire(
+                'Thank you',
+                'You Successfully submitted your quiz !',
+                'Know your score'
+            )
             endQuiz();
         }, 2000)
+
 
 
     }
@@ -100,7 +108,9 @@ const loadQuestion = () => {
     quesBox.innerText = `${index + 1}. ${data.que}`;
 
     optionInputs.forEach((input, i) => {
+
         input.nextElementSibling.innerText = data[String.fromCharCode(97 + i)];
+
     });
 };
 
@@ -202,7 +212,7 @@ const endQuiz = () => {
 
     resultDiv.innerHTML = `
         <div id="result">
-            <h3>${message}</h3>
+            <h3 >${message}</h3>
             <h2>You scored ${right} out of ${total}</h2>
             <img src="${imageSrc}" alt="Score Image" style="width:300px " />
         </div>

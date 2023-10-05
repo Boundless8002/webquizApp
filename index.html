@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Quiz</title>
-</head>
-<link rel="stylesheet" href="quiz.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  </head>
+  <link rel="stylesheet" href="quiz.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
-<body>
+  <body>
     <!-- <p id="counterdown">02:00</p> -->
     <div class="container">
-        
-       
-        <button id="btn" class="question">Start Quiz</button>
+      <button id="btn" class="question">Start Quiz</button>
     </div>
     <!-- <script src="app.js"></script> -->
     <script>
-        let btn=document.querySelector('#btn');
-btn.addEventListener("click",()=>{
-    
-location.href="questions.html" ;
-sessionStorage.setItem("location.href.value");
-});
-
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", () => {
+        location.href = "questions.html";
+        sessionStorage.setItem("location.href.value");
+      });
     </script>
-</body>
-
+  </body>
 </html>
