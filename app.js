@@ -1,5 +1,5 @@
 
-let startMinutes = .15;
+let startMinutes = 2;
 let currtime = startMinutes * 60;
 const countdown = document.getElementById('time');
 let timeout;
