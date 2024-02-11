@@ -2,21 +2,10 @@
   padding: 0;
   margin: 0;
 }
-/* #counterdown{
-    width:40%;
-    height:50px;
-    display:flex-inline;
-    justify-content: center;
-    Font-size:45px;
-    font-weight:60px;
-    float:right;
-    
-    
-    background-color: aqua;
-} */
+
 .container {
   width: 100%;
-  background-color: grey;
+  background-color: #ffdbc3;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +17,14 @@
   width: 45%;
   border: none;
   border-radius: 200px;
-  background-color: cornflowerblue;
+  background-color: #38419d;
   color: white;
   padding: 20px;
   font-weight: 200px;
-  font-size: 35px;
+  font-size: 38px;
+}
+#btn:hover {
+  background-color: #820300;
 }
 #que {
   width: 42%;
@@ -40,27 +32,24 @@
   border: none;
 }
 #quiz {
-  box-shadow: 10px 10px 10px 10px;
+  box-shadow: 0px 0px 100px 100px #d5ffe4;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-    align-items: center;  */
+  background-color: #fff;
   border-radius: 4px;
-  /* display:grid; */
-  background-color: blueviolet;
+
   width: 1000px;
   height: 600px;
-  /* justify-content: center;
-    align-items: center; */
 }
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: red;
+  background-color: #7f27ff;
   height: 80px;
+  color: #fff;
 }
 .body {
-  background-color: aqua;
+  background-color: #f3f8ff;
   height: 520px;
 }
 .quiz_start {
@@ -71,7 +60,11 @@
   padding-left: 40px;
 }
 #time {
-  font-size: 45px;
+  display: flex;
+
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
   padding-right: 40px;
 }
 
@@ -90,6 +83,7 @@
   justify-content: space-between;
   font-display: 50px;
   height: 50px;
+
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 70px;
@@ -101,7 +95,7 @@
   cursor: pointer;
 }
 #previous {
-  padding: 8px;
+  padding: 10px;
   font-size: 30px;
   background-color: blue;
   border: 4px;
@@ -109,7 +103,7 @@
   color: antiquewhite;
 }
 #nextbtn {
-  padding: 8px;
+  padding: 10px;
 
   font-size: 30px;
   background-color: blue;
@@ -120,7 +114,7 @@
 #start-again {
   /* margin:230px; */
   padding: 10px;
-  /* background-color:  aqua; */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,8 +129,10 @@
   font-size: 20px;
   margin-bottom: 50px;
 }
+resultDiv {
+  background-color: #fff;
+}
 #result {
-  color: white;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -150,5 +146,43 @@
   color: antiquewhite;
   font-size: 36px;
 }
+@media (width<1007px) {
+  #quiz {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+  }
+}
+@media (width<756px) {
+  .header {
+    height: 120px;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+@media (width<611px) {
+  .button {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .quiz_start {
+    font-size: 30px;
+  }
+  #time {
+    font-size: 30px;
+  }
+}
+@media (width<408px) {
+  .header {
+    height: 120px;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+  }
+  .quiz_start,
+  #time {
+    font-size: 28px;
+  }
+}
 
-/* Add these styles to your quiz.css stylesheet */
