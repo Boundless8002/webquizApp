@@ -1,9 +1,11 @@
+let timeUpAlert = false;
 
 let startMinutes = 2;
 let currtime = startMinutes * 60;
 const countdown = document.getElementById('time');
 let timeout;
 setInterval(update, 1000);
+
 
 function update() {
     let minutes = Math.floor(currtime / 60);
@@ -16,11 +18,13 @@ function update() {
     countdown.innerHTML = `${minutes} : ${seconds}`;
     currtime--;
     currtime = currtime < 0 ? 0 : currtime;
-    if (currtime === 0) {
+    if (currtime === 0 && !timeUpAlert) {
+        timeUpAlert = true;
         setTimeout(() => {
             alert("Time up");
             endQuiz();
         }, 2000)
+
 
 
     }
@@ -100,7 +104,9 @@ const loadQuestion = () => {
     quesBox.innerText = `${index + 1}. ${data.que}`;
 
     optionInputs.forEach((input, i) => {
+
         input.nextElementSibling.innerText = data[String.fromCharCode(97 + i)];
+
     });
 };
 
@@ -202,12 +208,12 @@ const endQuiz = () => {
 
     resultDiv.innerHTML = `
         <div id="result">
-            <h3>${message}</h3>
-            <h2>You scored ${right} out of ${total}</h2>
+            <h3 style="color:blue">${message}</h3>
+            <h2 style="color:#3B3486">You scored ${right} out of ${total}</h2>
             <img src="${imageSrc}" alt="Score Image" style="width:300px " />
         </div>
         <div id="start-again">
-            <button id="again" onClick="again()">Start Again</button>
+            <button id="again" onClick="again()" style="background-color:#3B3486;color:#fff">Start Again</button>
         </div>
     `;
 };
